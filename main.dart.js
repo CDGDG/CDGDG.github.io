@@ -106961,7 +106961,7 @@ s($,"bca","Lg",()=>new A.ard())
 r($,"bdD","aKC",()=>A.aW(["en",new A.aEn(),"ko",new A.aEo()],t.N,A.a2("an<@>()")))
 s($,"beM","aWb",()=>new A.Te(A.aNW(A.b8x())))
 s($,"beN","aWc",()=>new A.Td(A.aNV(A.b8y())))
-s($,"beV","aKW",()=>{var q,p,o,n,m=null,l=t.s,k=A.lx(B.fa,m,"assets/images/bloc_code.png",B.ai4.ga_7(),"https://github.com/CDGDG/cdgdg_flutter_code",m,A.a(["Flutter","Dart","Bloc"],l),m,!1,!0,m,"Bloc \uc0d8\ud50c \ucf54\ub4dc",m,"Bloc Code Style",m),j=B.ai_.j(0,400)
+s($,"beV","aKW",()=>{var q,p,o,n,m=null,l=t.s,k=A.lx(B.fa,m,"assets/images/bloc_code.png",B.ai4.ga_7(),"https://github.com/CDGDG/cdgdg_flutter_code",m,A.a(["Flutter","Dart","Bloc","Riverpod"],l),m,!1,!0,m,"Bloc, Riverpod \uc0d8\ud50c \ucf54\ub4dc",m,"Flutter Code Style",m),j=B.ai_.j(0,400)
 j.toString
 j=A.lx(B.fb,u.W,"assets/images/parking_app_4.jpeg",j,m,u.Q,A.a(["Flutter","Firebase","Figma","Localization","Bloc","Hive","Dio"],l),"assets/images/parking_app_icon.png",!1,!0,"/projects/nexpaparking","\ud3b8\ub9ac\ud558\uace0 \ud6a8\uc728\uc801\uc778 \uc8fc\ucc28\uc7a5 \uc571",m,"Nexpa Parking",m)
 q=A.atE().gZD()
