@@ -137,6 +137,15 @@
     }
   </style>
   <script>
+    (function () {
+      const redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+
+      if (redirect && redirect !== location.pathname + location.search + location.hash) {
+        history.replaceState(null, '', redirect);
+      }
+    })();
+
     window.hideInitialLoadingOverlay = function () {
       const overlay = document.getElementById('initial-loading-overlay');
       if (!overlay) {
