@@ -13,6 +13,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://cdgdg.github.io/brain</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://cdgdg.github.io/thoughts/ai-tool</loc>
     <priority>0.7</priority>
   </url>

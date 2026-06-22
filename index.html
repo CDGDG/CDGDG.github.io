@@ -142,7 +142,10 @@
       delete sessionStorage.redirect;
 
       if (redirect && redirect !== location.pathname + location.search + location.hash) {
-        history.replaceState(null, '', redirect);
+        const hashRoute = redirect.startsWith('/#')
+          ? redirect
+          : '/#/' + redirect.replace(/^\//, '');
+        history.replaceState(null, '', hashRoute);
       }
     })();
 
