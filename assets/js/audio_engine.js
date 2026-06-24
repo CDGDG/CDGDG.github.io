@@ -15,6 +15,7 @@
     playing: false,
     muted: false,
   };
+  const audibleVolume = 0.18;
 
   function clamp(value) {
     return Math.max(0, Math.min(1, value));
@@ -29,30 +30,13 @@
     return sum / ((end - start) * 255);
   }
 
-  function syntheticSnapshot() {
-    if (!audio || !state.playing) {
-      return {
-        energy: 0,
-        low: 0,
-        mid: 0,
-        high: 0,
-        beat: false,
-        playing: state.playing,
-        muted: state.muted,
-        status: state.status,
-      };
-    }
-    const bpm = state.bpm || 84;
-    const beatLength = 60 / bpm;
-    const phase = (audio.currentTime % beatLength) / beatLength;
-    const pulse = Math.exp(-phase * 7);
-    const slow = (Math.sin(audio.currentTime * 1.4) + 1) / 2;
+  function emptySnapshot() {
     return {
-      energy: clamp(0.20 + pulse * 0.42 + slow * 0.10),
-      low: clamp(0.18 + pulse * 0.52),
-      mid: clamp(0.12 + slow * 0.26),
-      high: clamp(0.10 + Math.max(0, Math.sin(audio.currentTime * 8)) * 0.18),
-      beat: phase < 0.12,
+      energy: 0,
+      low: 0,
+      mid: 0,
+      high: 0,
+      beat: false,
       playing: state.playing,
       muted: state.muted,
       status: state.status,
@@ -126,25 +110,6 @@
     setState(src, title, artist, mood, bpm, state.status, state.playing, state.muted);
   }
 
-  async function autoplayMuted(src, title, artist, mood, bpm) {
-    console.info('JustMakeAudio autoplay muted', title, src);
-    disconnectGraph();
-    ensureAudio(src, title, artist, mood, bpm);
-    audio.muted = true;
-    audio.volume = 0;
-    state.muted = true;
-    state.status = 'autoplay-muted';
-
-    try {
-      await audio.play();
-      state.status = 'autoplay-muted';
-      state.playing = true;
-    } catch (error) {
-      state.status = 'autoplay-blocked';
-      state.playing = false;
-    }
-  }
-
   async function start(src, title, artist, mood, bpm) {
     console.info('JustMakeAudio start', title, src);
     ensureAudio(src, title, artist, mood, bpm);
@@ -167,7 +132,7 @@
     analyser.connect(context.destination);
 
     audio.muted = false;
-    audio.volume = 1;
+    audio.volume = audibleVolume;
     state.muted = false;
 
     try {
@@ -189,18 +154,34 @@
     state.status = 'paused';
   }
 
+  function setMuted(muted) {
+    state.muted = muted;
+    if (audio) {
+      audio.muted = muted;
+      if (!muted) {
+        audio.volume = audibleVolume;
+      }
+    }
+    if (state.playing) {
+      state.status = muted ? 'muted' : 'playing';
+    }
+  }
+
   function snapshot() {
     if (!analyser || !frequencyData || !state.playing) {
-      return syntheticSnapshot();
+      return emptySnapshot();
     }
 
     analyser.getByteFrequencyData(frequencyData);
-    const low = clamp(average(frequencyData, 1, 18) * 1.28);
-    const mid = clamp(average(frequencyData, 18, 88) * 1.12);
-    const high = clamp(average(frequencyData, 88, frequencyData.length) * 1.04);
-    const energy = clamp(low * 0.52 + mid * 0.30 + high * 0.18);
+    const rawLow = average(frequencyData, 1, 18);
+    const rawMid = average(frequencyData, 18, 88);
+    const rawHigh = average(frequencyData, 88, frequencyData.length);
+    const low = clamp(Math.pow(rawLow * 2.15, 0.72));
+    const mid = clamp(Math.pow(rawMid * 1.82, 0.78));
+    const high = clamp(Math.pow(rawHigh * 1.55, 0.82));
+    const energy = clamp(low * 0.62 + mid * 0.27 + high * 0.11);
     const now = performance.now();
-    const beat = energy > 0.34 && energy - lastEnergy > 0.055 && now - lastBeatAt > 180;
+    const beat = energy > 0.26 && energy - lastEnergy > 0.035 && now - lastBeatAt > 150;
 
     if (beat) {
       lastBeatAt = now;
@@ -220,9 +201,9 @@
   }
 
   const bridge = {
-    autoplayMuted,
     start,
     stop,
+    setMuted,
     snapshot,
   };
   window.JustMakeAudio = bridge;
