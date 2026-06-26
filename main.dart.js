@@ -37808,7 +37808,7 @@ A.a10.prototype={}
 A.a5S.prototype={}
 A.FU.prototype={
 F(a){var s="SpaceGrotesk"
-return new A.vx(B.M_,"CDGDG Portfolio",A.ai6(null,B.AN,s,B.b7,B.wx.a48(B.y,B.y,s),!0),!1,null)}}
+return new A.vx(B.M_,"CDGDG",A.ai6(null,B.AN,s,B.b7,B.wx.a48(B.y,B.y,s),!0),!1,null)}}
 A.ta.prototype={}
 A.RM.prototype={
 Ql(){var s,r,q=v.G.JustMakeAudio.snapshot(),p=q.spectrum,o=q.energy,n=q.low,m=q.mid,l=q.high,k=q.beat,j=q.playing,i=q.muted

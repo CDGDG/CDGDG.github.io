@@ -1,11 +1,11 @@
 {
-    "name": "cdgdg_github_io",
-    "short_name": "cdgdg_github_io",
+    "name": "CDGDG",
+    "short_name": "CDGDG",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#050505",
+    "theme_color": "#050505",
+    "description": "CDGDG — Cho Donggun portfolio.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
