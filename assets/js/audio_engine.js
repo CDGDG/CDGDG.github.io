@@ -30,6 +30,29 @@
     return sum / ((end - start) * 255);
   }
 
+  // Log-spaced, normalised frequency spectrum (real equalizer data) so the
+  // visualisers can react per-frequency instead of to one global level.
+  function buildSpectrum(data, bins) {
+    const out = new Array(bins);
+    const minBin = 1;
+    const maxBin = data.length; // 512 for fftSize 1024
+    for (let i = 0; i < bins; i++) {
+      const f0 = minBin * Math.pow(maxBin / minBin, i / bins);
+      const f1 = minBin * Math.pow(maxBin / minBin, (i + 1) / bins);
+      const a = Math.max(minBin, Math.floor(f0));
+      const b = Math.max(a + 1, Math.ceil(f1));
+      let sum = 0;
+      let cnt = 0;
+      for (let k = a; k < b && k < maxBin; k++) {
+        sum += data[k];
+        cnt++;
+      }
+      const v = cnt ? sum / cnt / 255 : 0;
+      out[i] = clamp(Math.pow(v * 1.35, 0.82));
+    }
+    return out;
+  }
+
   function emptySnapshot() {
     return {
       energy: 0,
@@ -40,6 +63,7 @@
       playing: state.playing,
       muted: state.muted,
       status: state.status,
+      spectrum: [],
     };
   }
 
@@ -197,6 +221,7 @@
       playing: state.playing,
       muted: state.muted,
       status: state.status,
+      spectrum: buildSpectrum(frequencyData, 64),
     };
   }
 
