@@ -38928,14 +38928,14 @@ k.r=B.km.aP(0.05).gp()
 b0.kR(b,k)
 a=A.aH()
 a.b=B.aJ
-a.c=0.9
+a.c=0.85
 a.d=B.jj
-for(a0=0;a0<11;++a0){a1=a0/10
-a2=0.034+a0*0.0052
-a3=a0*1.07
-a4=0.42+0.58*a1
+for(a0=0;a0<18;++a0){a1=a0/17
+a2=0.034+a0*0.0034
+a3=a0*0.8
+a4=0.4+0.6*a1
 a5=A.dJ($.a_().r)
-for(k=a5.e,i=s*(0.5+a0*0.075),j=0;j<l.length;++j){o=j*2
+for(k=a5.e,i=s*(0.5+a0*0.048),j=0;j<l.length;++j){o=j*2
 d=l[j]
 a6=a9+Math.sin(o*a2-i+a3)*(d*64)*a4
 if(j===0){d=new A.i_(a6,o)
@@ -38944,7 +38944,7 @@ c=a5.d
 if(c!=null)d.ep(c)}else{d=new A.df(a6,o)
 k.push(d)
 c=a5.d
-if(c!=null)d.ep(c)}}a.r=B.km.aP(0.07+0.1*(1-a1)).gp()
+if(c!=null)d.ep(c)}}a.r=B.km.aP(0.055+0.085*(1-a1)).gp()
 b0.kR(a5,a)}},
 dK(a){return!0}}
 A.acj.prototype={
