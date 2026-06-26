@@ -39552,13 +39552,13 @@ f=o.bu()
 n.drawRect(A.bO(new A.z(i,h,i+q,h+g)),f)
 f.delete()}if(c9.e){$.Y()
 e=A.aF()
-for(i=c9.x*5,d=c9.f*0.7+c9.y*0.7,c=q/4.5,b=d1-1,a=d1===1,j=0;j<d1;++j){a0=d0[j].d
+for(i=c9.x*5,d=c9.f*0.45+c9.y*0.3,c=q/4.5,b=d1-1,a=d1===1,j=0;j<d1;++j){a0=d0[j].d
 if(a0<=0)continue
 a1=j*r+k
 a2=a1+q
 a3=a1+7
 h=p-a0/m*l+6
-a4=d+c9.a2d(a?0:j/b)*0.35
+a4=d+c9.a2d(a?0:j/b)*0.22
 a5=B.h.aC(B.d.e2(c),2,6)
 a6=q/a5
 a7=B.d.e2((p-h-2)/5)
@@ -39573,7 +39573,7 @@ c0=Math.sin(a0+b7*78.233+b5)*43758.5453
 c1=Math.floor(c0)
 c2=a4*(0.85+0.15*Math.sin(i+(a9+b7*13+b6)*0.6))-(c0-c1)
 if(c2<=0)continue
-e.r=B.Bz.aH(B.d.aC(0.28+c2*1.2,0,1)).gp()
+e.r=B.Bz.aH(B.d.aC(0.22+c2*0.75,0,1)).gp()
 f=e.bu()
 n.drawRect(A.bO(new A.z(b3,b8,b4,b9)),f)
 f.delete()}}}}$.Y()
