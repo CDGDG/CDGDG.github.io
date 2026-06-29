@@ -38220,7 +38220,7 @@ h=o.b
 o.d=new A.k(m.a+i*h,m.b+j*h)
 h=k.d
 m=k.b
-k.d=new A.k(h.a-i*m,h.b-j*m)}for(a4=new A.by(a4,a4.r,a4.e),m=5+a6*14;a4.n();){j=a4.d
+k.d=new A.k(h.a-i*m,h.b-j*m)}for(a4=new A.by(a4,a4.r,a4.e),m=2.8+a6*8;a4.n();){j=a4.d
 i=j.a
 a=i.c===B.as||i.a==="d-study"?0.014:0.009
 h=j.d
