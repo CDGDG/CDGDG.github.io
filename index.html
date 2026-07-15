@@ -1,47 +1,371 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>조동건 | Flutter 앱 개발자 · AI 자동화</title>
+    <meta
+      name="description"
+      content="Flutter로 Android·iOS 앱을 출시하고, AI 에이전트와 자동화로 반복 업무를 개선하는 개발자 조동건의 포트폴리오입니다."
+    />
+    <meta name="theme-color" content="#f7f9fb" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="조동건 | Flutter 앱 개발자 · AI 자동화" />
+    <meta
+      property="og:description"
+      content="모바일 앱 출시·운영 경험과 AI 자동화 프로젝트를 실제 결과물로 확인할 수 있습니다."
+    />
+    <meta property="og:url" content="https://cdgdg.github.io" />
+    <meta
+      property="og:image"
+      content="https://cdgdg.github.io/assets/images/finalsay_graphic.png"
+    />
+    <link rel="canonical" href="https://cdgdg.github.io" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "조동건",
+        "alternateName": "CDGDG",
+        "jobTitle": "Flutter 앱 개발자",
+        "url": "https://cdgdg.github.io",
+        "sameAs": ["https://github.com/cdgdg"],
+        "knowsAbout": [
+          "Flutter",
+          "Dart",
+          "Mobile Application Development",
+          "AI Automation",
+          "Node.js",
+          "Django"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="조동건 포트폴리오 처음으로">
+          <strong>조동건</strong>
+          <span>Flutter · AI Automation</span>
+        </a>
+        <nav class="main-nav" aria-label="주요 메뉴">
+          <a href="#experience">경력</a>
+          <a href="#projects">프로젝트</a>
+          <a href="#automation">AI·자동화</a>
+          <a href="#contact">연락</a>
+        </nav>
+        <a
+          class="header-action"
+          href="assets/resumes/조동건_Flutter_모바일_앱_개발자_이력서.pdf"
+          download
+        >
+          <i data-lucide="download" aria-hidden="true"></i>
+          <span>이력서</span>
+        </a>
+      </div>
+    </header>
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+    <main id="top">
+      <section class="hero section-shell" aria-labelledby="hero-title">
+        <p class="eyebrow">Flutter Mobile Developer · AI Automation</p>
+        <h1 id="hero-title">조동건</h1>
+        <p class="hero-copy">
+          Flutter로 Android와 iOS 앱을 만들고 출시·운영해 왔습니다. 최근에는
+          Python, TypeScript, Node.js와 AI 에이전트를 이용해 반복 업무와 콘텐츠
+          운영을 자동화하고 있습니다.
+        </p>
+        <div class="hero-actions" aria-label="주요 문서와 링크">
+          <a
+            class="button button-primary"
+            href="assets/resumes/조동건_Flutter_모바일_앱_개발자_이력서.pdf"
+            download
+          >
+            <i data-lucide="smartphone" aria-hidden="true"></i>
+            모바일 이력서
+          </a>
+          <a
+            class="button button-secondary"
+            href="assets/resumes/조동건_AI_자동화_제품_개발_이력서.pdf"
+            download
+          >
+            <i data-lucide="workflow" aria-hidden="true"></i>
+            AI·자동화 이력서
+          </a>
+          <a class="button button-ghost" href="https://github.com/cdgdg" target="_blank" rel="noreferrer">
+            <i data-lucide="github" aria-hidden="true"></i>
+            GitHub
+          </a>
+        </div>
+        <dl class="quick-facts">
+          <div>
+            <dt>경력</dt>
+            <dd>3년 11개월</dd>
+          </div>
+          <div>
+            <dt>출시</dt>
+            <dd>Android · iOS · Web</dd>
+          </div>
+          <div>
+            <dt>현재</dt>
+            <dd>Flutter 앱 개발 · 업무 자동화</dd>
+          </div>
+        </dl>
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+        <div class="product-strip" aria-label="대표 프로젝트 화면">
+          <figure class="product-shot product-shot-wide">
+            <img src="assets/images/finalsay_graphic.png" alt="FinalSay 앱 대표 화면" />
+            <figcaption>FinalSay · AI 판결형 토론 앱</figcaption>
+          </figure>
+          <figure class="product-shot">
+            <img src="assets/images/msg_home_map.png" alt="뭐 생겨 앱 지도 화면" />
+            <figcaption>뭐 생겨? · 공공데이터 위치 앱</figcaption>
+          </figure>
+          <figure class="product-shot product-shot-wide">
+            <img src="assets/images/bapsang_feature.png" alt="밥상코스피 서비스 화면" />
+            <figcaption>밥상코스피 · 생활물가 서비스</figcaption>
+          </figure>
+        </div>
+      </section>
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
+      <section class="section-band" id="experience" aria-labelledby="experience-title">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">Experience</p>
+            <h2 id="experience-title">서비스를 만들고 운영해 온 경력</h2>
+            <p>화면 구현보다 인증, API, 상태, 외부 SDK, 배포가 이어지는 전체 흐름을 맡았습니다.</p>
+          </div>
+          <ol class="career-list">
+            <li>
+              <div class="career-period">2025.04 - 현재</div>
+              <div class="career-content">
+                <h3>네오렉트</h3>
+                <p class="career-role">Flutter 앱 개발 · Backend API · AI 업무 자동화</p>
+                <p>
+                  리워드형 다이어리 앱의 인증·소셜 로그인·이미지 업로드·광고 보상 흐름을
+                  개발하고, GPS·FCM·iOS 배포 오류를 해결했습니다. Flutter Web과 Node.js로
+                  도시 수목 관리 플랫폼도 구축했습니다.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="career-period">2023.02 - 2025.02</div>
+              <div class="career-content">
+                <h3>지엔씨솔루션</h3>
+                <p class="career-role">Flutter 앱 개발 · 프론트엔드 파트장</p>
+                <p>
+                  주차 관리, 스테이킹, 지갑·채굴기 관리 앱을 개발했습니다. Bloc/Cubit,
+                  REST API, GraphQL, JWT, FCM, Dynamic Link를 적용하고 Play Store와 App Store
+                  배포를 담당했습니다.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="career-period">2022.08 - 2023.01</div>
+              <div class="career-content">
+                <h3>파워젠</h3>
+                <p class="career-role">Django 백엔드 · OCR 도구 · Flutter 앱 개발</p>
+                <p>
+                  Django, OpenCV, MySQL로 OCR 라벨링 도구를 만들고 Flutter OCR 앱에서
+                  카메라 입력, 결과 비교, 데이터 저장 흐름을 연결했습니다.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="CDGDG Portfolio. JUST MAKE: audio-reactive black lab for shipped products, automation, and AI engineering experiments.">
+      <section class="section-shell section-space" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading section-heading-row">
+          <div>
+            <p class="eyebrow">Selected Projects</p>
+            <h2 id="projects-title">직접 확인할 수 있는 프로젝트</h2>
+          </div>
+          <div class="project-filter" role="group" aria-label="프로젝트 필터">
+            <button type="button" data-filter="all" aria-pressed="true">전체</button>
+            <button type="button" data-filter="mobile" aria-pressed="false">모바일</button>
+            <button type="button" data-filter="ai" aria-pressed="false">AI·자동화</button>
+            <button type="button" data-filter="web" aria-pressed="false">웹</button>
+          </div>
+        </div>
 
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="CDGDG">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+        <div class="project-grid">
+          <article class="project-card" data-categories="mobile ai">
+            <img src="assets/images/finalsay_graphic.png" alt="FinalSay 대표 이미지" />
+            <div class="project-body">
+              <p class="project-meta">PERSONAL · MOBILE · AI</p>
+              <h3>FinalSay</h3>
+              <p class="project-summary">사람이 주장하고 공감하면 AI가 양측 논리를 읽고 판결하는 토론 앱</p>
+              <dl class="project-notes">
+                <div><dt>고민</dt><dd>AI가 전부 말하면 사용자가 참여할 이유가 없었습니다.</dd></div>
+                <div><dt>담당</dt><dd>토론·주장·공감·판결, OAuth, JWT 갱신, FCM, 딥링크, 광고</dd></div>
+                <div><dt>결과</dt><dd>App Store 배포, 토론 seed와 숏폼 운영 자동화까지 확장</dd></div>
+              </dl>
+              <div class="project-links">
+                <a href="https://apps.apple.com/app/id6758050388" target="_blank" rel="noreferrer">App Store <i data-lucide="external-link"></i></a>
+              </div>
+            </div>
+          </article>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+          <article class="project-card" data-categories="mobile">
+            <img src="assets/images/sdbn_graphic.png" alt="쓰다보니 앱 대표 이미지" />
+            <div class="project-body">
+              <p class="project-meta">WORK · MOBILE</p>
+              <h3>쓰다보니</h3>
+              <p class="project-summary">일기 작성과 광고 보상, 포인트, 기프티콘 교환을 연결한 리워드 앱</p>
+              <dl class="project-notes">
+                <div><dt>고민</dt><dd>로그인, 일기, 광고, 보상 상태가 한 사용자 흐름에서 이어져야 했습니다.</dd></div>
+                <div><dt>담당</dt><dd>Cubit, 토큰 갱신, 소셜 로그인, 이미지 업로드, 광고 보상</dd></div>
+                <div><dt>결과</dt><dd>4개 탭의 주요 기능과 실패·재시도 상태를 구현</dd></div>
+              </dl>
+            </div>
+          </article>
 
-  <title>CDGDG</title>
-  <link rel="manifest" href="manifest.json">
-</head>
-<body>
-  <!--
-    You can customize the "flutter_bootstrap.js" script.
-    This is useful to provide a custom configuration to the Flutter loader
-    or to give the user feedback during the initialization process.
+          <article class="project-card" data-categories="mobile">
+            <img src="assets/images/msg_graphic.png" alt="뭐 생겨 앱 대표 이미지" />
+            <div class="project-body">
+              <p class="project-meta">PERSONAL · MOBILE</p>
+              <h3>뭐 생겨?</h3>
+              <p class="project-summary">내 주변의 최근 인허가 정보를 지도에서 찾는 위치 기반 앱</p>
+              <dl class="project-notes">
+                <div><dt>계기</dt><dd>집 근처 공사 중인 가게에 무엇이 생기는지 궁금했습니다.</dd></div>
+                <div><dt>담당</dt><dd>40개 이상 공공 API, 위치·지도, 좌표 변환, 부분 실패 처리</dd></div>
+                <div><dt>결과</dt><dd>Android와 iOS 스토어에 배포</dd></div>
+              </dl>
+              <div class="project-links">
+                <a href="https://play.google.com/store/apps/details?id=com.cdgdg.msg" target="_blank" rel="noreferrer">Google Play <i data-lucide="external-link"></i></a>
+                <a href="https://apps.apple.com/kr/app/id6759196990" target="_blank" rel="noreferrer">App Store <i data-lucide="external-link"></i></a>
+              </div>
+            </div>
+          </article>
 
-    For more details:
-    * https://docs.flutter.dev/platform-integration/web/initialization
-  -->
-  <script src="assets/js/audio_engine.js"></script>
-  <script src="flutter_bootstrap.js" async></script>
-</body>
+          <article class="project-card" data-categories="web">
+            <img src="assets/images/savetree_treemap.jpg" alt="SaveTree 수목 지도 화면" />
+            <div class="project-body">
+              <p class="project-meta">WORK · WEB · BACKEND</p>
+              <h3>SaveTree</h3>
+              <p class="project-summary">LiDAR 수목 데이터를 지도·로드뷰·IoT로 관리하는 B2G 플랫폼</p>
+              <dl class="project-notes">
+                <div><dt>문제</dt><dd>기존 시스템은 느렸고 수천 그루를 행정 단위로 보기 어려웠습니다.</dd></div>
+                <div><dt>담당</dt><dd>Flutter Web, Node.js API, MySQL, Naver Maps, IoT 화면</dd></div>
+                <div><dt>결과</dt><dd>강남구 수목 3,908그루를 관리하는 플랫폼 납품</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="project-card" data-categories="mobile web">
+            <img src="assets/images/bapsang_feature.png" alt="밥상코스피 대표 이미지" />
+            <div class="project-body">
+              <p class="project-meta">PERSONAL · MOBILE · WEB</p>
+              <h3>밥상코스피</h3>
+              <p class="project-summary">식재료와 생필품 가격을 주식 시세처럼 보여주는 생활물가 서비스</p>
+              <dl class="project-notes">
+                <div><dt>문제</dt><dd>지금 장바구니 물가가 비싼지 싼지 한눈에 보기 어려웠습니다.</dd></div>
+                <div><dt>담당</dt><dd>Flutter 앱, React 웹·관리자, Node.js 서버, Supabase</dd></div>
+                <div><dt>결과</dt><dd>웹 운영과 App Store 배포</dd></div>
+              </dl>
+              <div class="project-links">
+                <a href="https://bapsang-kospi.vercel.app" target="_blank" rel="noreferrer">Web <i data-lucide="external-link"></i></a>
+                <a href="https://apps.apple.com/app/id6776868090" target="_blank" rel="noreferrer">App Store <i data-lucide="external-link"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-categories="ai web">
+            <img src="assets/images/koreatrend_home.jpg" alt="최신유행사이트 대시보드" />
+            <div class="project-body">
+              <p class="project-meta">PERSONAL · AI · WEB</p>
+              <h3>최신유행사이트</h3>
+              <p class="project-summary">최근 48시간의 밈·유행어를 evidence와 함께 보여주는 트렌드 대시보드</p>
+              <dl class="project-notes">
+                <div><dt>문제</dt><dd>흩어진 유행 정보에 AI가 만든 가짜 밈까지 섞였습니다.</dd></div>
+                <div><dt>담당</dt><dd>후보 수집, 출처 검증, 노이즈 필터, 데이터 갱신, Flutter Web</dd></div>
+                <div><dt>결과</dt><dd>랭킹·히트맵·상세 분석 서비스를 운영</dd></div>
+              </dl>
+              <div class="project-links">
+                <a href="https://koreatrend.vercel.app" target="_blank" rel="noreferrer">Live <i data-lucide="external-link"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="automation-band" id="automation" aria-labelledby="automation-title">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">AI & Automation</p>
+            <h2 id="automation-title">생성보다 운영에 필요한 연결을 만듭니다</h2>
+            <p>입력 수집부터 검증, 저장, 업로드, 실패 기록과 재실행까지 한 흐름으로 다룹니다.</p>
+          </div>
+          <div class="automation-list">
+            <article>
+              <span class="automation-index">01</span>
+              <div>
+                <h3>FinalSay 운영 자동화</h3>
+                <p>뉴스 RSS → 토론 seed 생성 → 검증 → 내부 API 등록</p>
+                <p>주제 → 대본 → TTS → 영상 렌더링 → YouTube 업로드 → 성과 확인</p>
+              </div>
+              <span class="automation-tech">Python · OpenAI API · MoviePy · YouTube API</span>
+            </article>
+            <article>
+              <span class="automation-index">02</span>
+              <div>
+                <h3>외주 프로젝트 지원 자동화</h3>
+                <p>사용자 선택 → 본문 분석 → 문서 작성 → 민감정보 검사 → 제출 → 상태 추적</p>
+                <p>중복 실행 사고 이후 로컬·웹·작성 이력·실행 결과를 함께 검사하도록 개선</p>
+              </div>
+              <span class="automation-tech">TypeScript · Python · SQLite · Supabase · Vercel</span>
+            </article>
+            <article>
+              <span class="automation-index">03</span>
+              <div>
+                <h3>AI 에이전트 개발 루프</h3>
+                <p>작업 분해 → 구현 → 실행 확인 → 테스트 → 교차 검토 → 배포 준비</p>
+                <p>Codex와 Claude Code의 산출물을 앱 동작, API 응답, 사용자 흐름으로 확인</p>
+              </div>
+              <span class="automation-tech">Codex · Claude Code · Browser & Simulator QA</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell section-space skills-section" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="eyebrow">Skills</p>
+          <h2 id="skills-title">주로 사용하는 기술</h2>
+        </div>
+        <div class="skill-columns">
+          <div><h3>Mobile</h3><p>Flutter, Dart, Bloc/Cubit, Dio, Hive, Firebase, FCM, OAuth, Deep Link, AdMob</p></div>
+          <div><h3>Backend & Data</h3><p>Node.js, Django, REST API, GraphQL, MySQL, PostgreSQL, SQLite, Supabase</p></div>
+          <div><h3>AI & Automation</h3><p>OpenAI API, Codex, Claude Code, Python, TypeScript, MoviePy, TTS, YouTube API</p></div>
+        </div>
+      </section>
+
+      <section class="contact-band" id="contact" aria-labelledby="contact-title">
+        <div class="section-shell contact-inner">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-title">조동건</h2>
+            <p>Flutter 모바일 앱 개발과 AI 기반 업무 자동화 경험이 필요한 팀을 찾고 있습니다.</p>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:whehdrjs953964@gmail.com"><i data-lucide="mail"></i> 이메일</a>
+            <a href="https://github.com/cdgdg" target="_blank" rel="noreferrer"><i data-lucide="github"></i> GitHub</a>
+            <a href="tel:+821071209539"><i data-lucide="phone"></i> 010-7120-9539</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell">
+        <span>© <span id="year"></span> 조동건</span>
+        <a href="#top">위로 <i data-lucide="arrow-up"></i></a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
