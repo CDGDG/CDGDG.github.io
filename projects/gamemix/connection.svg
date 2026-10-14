@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="540" viewBox="0 0 520 540" role="img" aria-labelledby="title desc"><title id="title">두 게임을 잇는 구조</title><desc id="desc">설명 도식. 오버워치 워크샵 → HUD 판독 → UDP → Fabric 모드. 두 화면 합성과 예약 키 입력 체력 반환. 체력 응답성 개선 중단.</desc><style>text{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;fill:#173b32}.kicker{font-size:17px;font-weight:700;letter-spacing:2px}.title{font-size:30px;font-weight:800}.label{font-size:23px;font-weight:750}.body{font-size:20px}.muted{fill:#527269}.arrow{fill:none;stroke:#527269;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.card{fill:#f6faf8;stroke:#c4ded2;stroke-width:2}.number{font-size:17px;fill:#527269;font-weight:700}</style><rect width="520" height="540" rx="24" fill="#e8f3ed"/><text class="kicker" x="24" y="36">GAMEMIX / EXPLAINED</text><text class="title" x="24" y="75">두 게임을 잇는 구조</text>
+<rect class="card" x="24" y="104" width="220" height="80" rx="14"/><text class="number" x="40" y="131">01 / 원본 조작</text><text class="label" x="40" y="164">오버워치 워크샵</text>
+<path class="arrow" d="M249 144h20m-7-7 7 7-7 7"/>
+<rect class="card" x="276" y="104" width="220" height="80" rx="14"/><text class="number" x="292" y="131">02 / 위치·시선·능력</text><text class="label" x="292" y="164">HUD 판독</text>
+<path class="arrow" d="M386 190v20m-7-7 7 7 7-7"/>
+<rect class="card" x="276" y="216" width="220" height="80" rx="14"/><text class="number" x="292" y="243">03 / 데이터 전달</text><text class="label" x="292" y="276">UDP</text>
+<path class="arrow" d="M269 256h-20m7-7-7 7 7 7"/>
+<rect class="card" x="24" y="216" width="220" height="80" rx="14"/><text class="number" x="40" y="243">04 / 지형·전투 처리</text><text class="label" x="40" y="276">Fabric 모드</text>
+<rect x="24" y="318" width="472" height="90" rx="14" fill="#173b32"/><text x="260" y="351" text-anchor="middle" class="body" style="fill:#e8f3ed">오버워치 화면 + 마크 화면</text><text x="260" y="387" text-anchor="middle" class="label" style="fill:#fff">↓ 합성 화면</text>
+<rect class="card" x="24" y="430" width="472" height="88" rx="14"/><text class="body" x="40" y="453">마크 체력 → 예약 키 입력</text><text class="label" x="40" y="480">→ 워크샵 원본 체력바</text><text x="40" y="506" style="font-size:17px;fill:#775131;font-weight:700">원본 HUD 연결 확인 · 응답성 개선 중단</text>
+</svg>
